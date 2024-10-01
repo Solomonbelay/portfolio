@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>My Portfolio</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        .l-header {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .nav__logo {
+            color: white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .work__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive design for larger screens */
+        @media screen and (min-width: 768px) {
+            .work__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .work__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer__social .footer__icon {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .footer__copy {
+            margin-top: 1rem;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">DEVELOPER, SOLOMON</a>
+            </div>
+        </nav>
+    </header>
+
+    <!--===== WORK =====-->
+    <section class="work section" id="work">
+        <h2 class="section-title">More Details About The Project</h2>
+        <p>This project is designed to manage a hospital digitally, eliminating the need for paper and automating the delay caused by carrying physical cards.</p>
+        
+        <!-- Buttons to go to the project and back -->
+        <div style="text-align: center;">
+            <a href="http://finalp.kesug.com/" class="button"  target="_blank">Go to Project</a>
+            <a href="index.html" class="button">Back </a>
+        </div>
+
+        <div class="work__container bd-grid">
+            <img src="assets/img/hms1.png" alt="Project Image 1" class="responsive-img">
+            <img src="assets/img/hms2.png" alt="Project Image 2" class="responsive-img">
+            <img src="assets/img/hms3.png" alt="Project Image 3" class="responsive-img">
+            <img src="assets/img/hms4.png" alt="Project Image 4" class="responsive-img">
+            <img src="assets/img/hms5.png" alt="Project Image 5" class="responsive-img">
+            <img src="assets/img/hms6.png" alt="Project Image 6" class="responsive-img">
+        </div>
+    </section>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">solomon</p>
+        <div class="footer__social">
+            <a href="https://www.facebook.com/som.lom.12/" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+            <a href="https://github.com/Solomonbelay" class="footer__icon"><i class='bx bxl-github'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p class="footer__copy">&#169; Solomon. All rights reserved</p>
+    </footer>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
