@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>My Portfolio | Project Details</title>
+
+    <!-- Boxicons CDN -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <title>My Portfolio</title>
+
     <style>
-        /* General reset */
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
@@ -16,44 +17,78 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
             line-height: 1.6;
         }
 
+        /* Header */
         .l-header {
-            background-color: #333;
-            padding: 1rem;
-            text-align: center;
+            background-color: #004466;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .nav__logo {
-            color: white;
-            font-size: 1.5rem;
-            text-transform: uppercase;
+            color: #fff;
+            font-size: 1.8rem;
             text-decoration: none;
+            font-weight: bold;
         }
 
+        /* Section Title */
         .section-title {
             text-align: center;
+            font-size: 2.5rem;
+            margin-top: 2rem;
             margin-bottom: 1rem;
-            font-size: 2rem;
+            color: #004466;
         }
 
+        p {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            font-size: 1.1rem;
+            text-align: center;
+            color: #555;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #005fa3;
+        }
+
+        /* Image grid */
         .work__container {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .responsive-img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        /* Responsive design for larger screens */
         @media screen and (min-width: 768px) {
             .work__container {
                 grid-template-columns: repeat(2, 1fr);
@@ -62,68 +97,60 @@
 
         @media screen and (min-width: 1024px) {
             .work__container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
+        /* Footer */
         .footer {
-            background-color: #333;
+            background-color: #004466;
             color: white;
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
         }
 
-        .footer__social .footer__icon {
+        .footer__social {
+            margin-top: 1rem;
+        }
+
+        .footer__icon {
             color: white;
             margin: 0 10px;
             font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .footer__icon:hover {
+            color: #00d1ff;
         }
 
         .footer__copy {
             margin-top: 1rem;
+            font-size: 0.9rem;
         }
-
-        /* Button styles */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 5px;
-            background-color: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #555;
-        }
-
     </style>
 </head>
 <body>
+
     <!--===== HEADER =====-->
     <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">DEVELOPER, SOLOMON</a>
-            </div>
+        <nav>
+            <a href="#" class="nav__logo">Developer Solomon</a>
         </nav>
     </header>
 
-    <!--===== WORK =====-->
+    <!--===== PROJECT SECTION =====-->
     <section class="work section" id="work">
-        <h2 class="section-title">More Details About The Project</h2>
-<p>This project is designed to facilitate digital learning by providing students and teachers with an interactive platform. It eliminates the need for physical materials and streamlines the education process through online access to courses, assignments, and assessments.</p>
-        
-        <!-- Buttons to go to the project and back -->
+        <h2 class="section-title">More Details About the Project</h2>
+        <p>This project is designed to facilitate digital learning by providing students and teachers with an interactive platform. It eliminates the need for physical materials and streamlines the education process through online access to courses, assignments, and assessments.</p>
+
         <div style="text-align: center;">
-            <a href="http://finalp.kesug.com/" class="button"  target="_blank">Go to Project</a>
-            <a href="index.html" class="button">Back </a>
+            <a href="https://yimaru.vercel.app/" class="button" target="_blank">Go to Project</a>
+            <a href="index.html" class="button">Back</a>
         </div>
 
-        <div class="work__container bd-grid">
+        <div class="work__container">
             <img src="assets/img/p1.png" alt="Project Image 1" class="responsive-img">
             <img src="assets/img/p2.png" alt="Project Image 2" class="responsive-img">
             <img src="assets/img/p3.png" alt="Project Image 3" class="responsive-img">
@@ -135,19 +162,17 @@
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <p class="footer__title">solomon</p>
+        <p class="footer__title">Solomon</p>
         <div class="footer__social">
             <a href="https://www.facebook.com/som.lom.12/" class="footer__icon"><i class='bx bxl-facebook'></i></a>
             <a href="https://github.com/Solomonbelay" class="footer__icon"><i class='bx bxl-github'></i></a>
             <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
         </div>
-        <p class="footer__copy">&#169; Solomon. All rights reserved</p>
+        <p class="footer__copy">&#169; Solomon. All rights reserved.</p>
     </footer>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
+    <!-- Optional Scroll Reveal / JS (not required for now) -->
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <!-- <script src="assets/js/main.js"></script> -->
 </body>
 </html>
